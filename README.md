@@ -111,8 +111,8 @@ def recall5(answer_df, submission_df):
 ## 대회 진행 과정      <!-- 대회의 진행과정 --> 
 
 1. EDA
-2. 하이브리드 기반의 추천 모델 개발
-3. 모델 방향 개선
+2. Hybrid 기반의 추천 모델 개발
+3. 모델 방향 개선 User-based Collaborative filtering
 
 
 <br/>
@@ -384,7 +384,8 @@ item_biases, item_embeddings = model.get_item_representations(features=item_feat
 
 <br><br>
 
-![score](./asset/score.png)
+<p align="center"><img src="./asset/score.png"></p>
+
 검증과 달리 public score는 너무 안좋게 나오는것을 깨달음 허나 하이브리드 개발에 시간이 오래 소비
 
 <br>
@@ -393,6 +394,8 @@ item_biases, item_embeddings = model.get_item_representations(features=item_feat
 추천 순위를 정하는 하이퍼 파라미터를 이용 & 점수를 매겨 추천순위를 정렬하여 추천  
 
 유저와 유저, item과 item들 끼리의 유사도 계산
+
+<br>
 
 
 ```python
@@ -412,7 +415,9 @@ for idx, user in tqdm(enumerate(train_user_item_matrix.index)):
         train_recommendations.append([user, job])
 ```
 이미 넣은 공고를 제외후, 만든 유사도 행렬을 이용해 공고 유사도 점수와 유저 유사도 점수를 조합하여 우선순위를 만들고 상위 5개를 추천함  
-alpha 라는 아이템의 가중치를 조절  
+alpha 라는 hyperparmeter로 item의 weight 조절  
+
+<br><br>
 Grid search를 통해 가장 좋은 점수를 내는 alpha 값을 이용하여 제출  
 
 ```python
@@ -453,8 +458,8 @@ print(f"Best alpha: {best_alpha}, Best recall: {best_recall}")
 ```
 <br>
 
-최종적으로 validation 보다 0.04 향상 되고, private에서는 0.17166 으로 좀더 향상된 점수로 마감
-33/576 Top 6% 획득
+**최종적으로 validation 보다 0.04 향상 되고, private에서는 0.17166 으로 좀더 향상된 점수로 마감 <br>
+33/576 Top 6% 획득**
 
 ---
 
