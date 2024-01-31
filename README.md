@@ -4,9 +4,9 @@
 
 ---
 
-**대회 기간:** 2023.10 ~ 2023.11 (1 month)         <!-- 기간, 도구, 스택 --> 
-
-**사용 언어:** Python Pandas Numpy Matplotlib Scipy LightFM Skcit-learn
+**대회 기간:** 2023.10 ~ 2023.11 (1 month)         <!-- 기간, 도구, 스택 --> <br>
+**사용 언어:** Python Pandas Numpy Matplotlib Scipy LightFM Skcit-learn  
+**주최/주관:** 국민대학교 경영대학원, LINC+ 사업단, DACON
 
 ---
 
@@ -465,9 +465,9 @@ print(f"Best alpha: {best_alpha}, Best recall: {best_recall}")
 
 <br><br><br>
 
-## 대회 한계 및 개선 방안      <!-- 대회 한계 및 개선 방안은 있었는지? (고뇌) -->
+## 회고      <!-- 대회 한계 및 개선 방안은 있었는지? (고뇌) -->
 
-**한계**
+**한계 및 아쉬운 점**
 - EDA 과정에서 독특한 점을 찾기 어려웠음
 - 스스로 추천 task에 대해 경험이 부족함
 - user-based의 info으로 겹치는 정보들이 많은 반에 비해 연관짓기 어려운 정보들이 존재함 또한 user 와 이을 정보로 item 들의 정보가 숫자로 가려지거나 판단하기 어려운 정보들이 다수 존재하였음
